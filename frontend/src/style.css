@@ -114,6 +114,27 @@
     @apply dark:shadow-amber-500/20;
   }
 
+  .btn-stripe {
+    @apply bg-[#635bff] text-white shadow-md shadow-[#635bff]/25;
+    @apply hover:bg-[#5851ea] hover:shadow-lg hover:shadow-[#635bff]/30;
+    @apply dark:bg-[#7a73ff] dark:shadow-[#7a73ff]/20;
+    @apply dark:hover:bg-[#635bff];
+  }
+
+  .btn-alipay {
+    @apply bg-[#00AEEF] text-white shadow-md shadow-[#00AEEF]/25;
+    @apply hover:bg-[#009dd6] hover:shadow-lg hover:shadow-[#00AEEF]/30;
+    @apply active:bg-[#008cbe];
+    @apply dark:shadow-[#00AEEF]/20;
+  }
+
+  .btn-wxpay {
+    @apply bg-[#2BB741] text-white shadow-md shadow-[#2BB741]/25;
+    @apply hover:bg-[#24a038] hover:shadow-lg hover:shadow-[#2BB741]/30;
+    @apply active:bg-[#1d8a2f];
+    @apply dark:shadow-[#2BB741]/20;
+  }
+
   .btn-sm {
     @apply rounded-lg px-3 py-1.5 text-xs;
   }
@@ -502,12 +523,16 @@
     @apply border-r border-gray-200 dark:border-dark-800;
     @apply flex flex-col;
     @apply transition-transform duration-300;
+    transition-property: width, transform;
   }
 
   .sidebar-header {
     @apply h-16 px-6;
     @apply flex items-center gap-3;
     @apply border-b border-gray-100 dark:border-dark-800;
+    transition:
+      padding 0.2s ease,
+      gap 0.2s ease;
   }
 
   .sidebar-nav {
@@ -515,12 +540,15 @@
   }
 
   .sidebar-link {
-    @apply flex items-center gap-3 rounded-xl px-3 py-2.5;
+    @apply flex items-center gap-3 rounded-xl py-2.5;
+    @apply overflow-hidden;
     @apply text-sm font-medium;
     @apply text-gray-600 dark:text-dark-300;
     @apply transition-all duration-200;
     @apply hover:bg-gray-100 dark:hover:bg-dark-800;
     @apply hover:text-gray-900 dark:hover:text-white;
+    padding-left: 1.0625rem;
+    padding-right: 0.875rem;
   }
 
   .sidebar-link-active {
